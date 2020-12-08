@@ -1,14 +1,6 @@
 package personal.idempotent.config;
 
-/**
- * @author: lazecoding
- * @date: 2020/12/7 22:54
- * @description:
- */
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -22,18 +14,18 @@ public class ProjectProperties {
     /**
      *  唯一ID生成类型
      */
-    private String type;
+    private int type;
 
     /**
      * 请求URL
      */
     private String url;
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
@@ -48,7 +40,7 @@ public class ProjectProperties {
     @Override
     public String toString() {
         return "ProjectProperties{" +
-                "type='" + type + '\'' +
+                "type=" + type +
                 ", url='" + url + '\'' +
                 '}';
     }
