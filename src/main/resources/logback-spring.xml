@@ -132,7 +132,7 @@
         <appender-ref ref="error-log"/>
     </root>
 
-    <!-- personal.unique 包下 DEBUG -->
-    <logger name="personal.unique" level="DEBUG" />
+    <!-- personal.idempotent 包下 DEBUG -->
+    <logger name="personal.idempotent" level="DEBUG" />
 
 </configuration>
