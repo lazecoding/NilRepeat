@@ -8,16 +8,24 @@ import personal.idempotent.exception.IdempotentException;
 public interface IdempotentCore {
 
     /**
-     * 获取 幂等事件 唯一Id
+     * 获取 事件唯一Id
      *
      * @return 事件唯一Id
      */
     String getIdempotentId() throws IdempotentException;
 
     /**
-     * 校验 事件幂等性
+     * 尝试 获取事件
      * @param idempotenId  事件唯一Id
      * @return 是否幂等
      */
-    boolean checkIdempotent(String idempotenId);
+    boolean tryIdempotent(String idempotenId) throws IdempotentException;
+
+
+    /**
+     * 回滚 事件唯一Id
+     * @param idempotentId  事件唯一Id
+     * @return 回滚是否成功
+     */
+    boolean rollbackIdempotent(String idempotentId) throws IdempotentException;
 }

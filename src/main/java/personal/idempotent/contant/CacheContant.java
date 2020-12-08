@@ -9,11 +9,11 @@ public enum CacheContant {
     /**
      * 幂等 - 常规
      */
-    IDEMPOTENTCOMMON("Idempotent:Common:", "IdempotentCommon"),
+    IDEMPOTENTCOMMON(":Idempotent:Common:", "IdempotentCommon"),
     /**
      * 幂等 - 控制器注解
      */
-    IDEMPOTENTANNOTATION("Idempotent:Annotation:", "IdempotentAnnotation");
+    IDEMPOTENTANNOTATION(":Idempotent:Annotation:", "IdempotentAnnotation");
 
     private String name;
     private String defaultValue;
