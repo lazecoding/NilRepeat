@@ -97,5 +97,7 @@ public class IdempotentAspect {
                 redisTemplate.delete(StringUtil.getString(map.get("key")));
             }
         }
+        // 移除该key 防止内存泄漏
+        threadLocal.remove();
     }
 }
